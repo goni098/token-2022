@@ -11,7 +11,17 @@ license = { workspace = true }
 edition = { workspace = true }
 
 [features]
-serde = ["dep:serde", "dep:serde_with", "serde/alloc", "solana-address/serde", "solana-address/decode", "solana-nullable/serde", "solana-nullable/serde-with", "solana-zero-copy/serde", "solana-zk-sdk-pod/serde"]
+serde = [
+    "dep:serde",
+    "dep:serde_with",
+    "serde/alloc",
+    "solana-address/serde",
+    "solana-address/decode",
+    "solana-nullable/serde",
+    "solana-nullable/serde-with",
+    "solana-zero-copy/serde",
+    "solana-zk-sdk-pod/serde",
+]
 
 [dependencies]
 arrayref = "0.3.9"
@@ -20,7 +30,7 @@ num-derive = "0.4"
 num-traits = { version = "0.2", features = ["libm"], default-features = false }
 num_enum = { version = "0.7.6", default-features = false }
 solana-account-info = "3.1.1"
-solana-address = { version = "2.6.1", features = ["bytemuck", "nullable"] }
+solana-address = { version = "2", features = ["bytemuck", "nullable"] }
 solana-instruction = { version = "3.0.0", default-features = false }
 solana-nullable = { version = "1.1.1", features = ["bytemuck"] }
 solana-program-error = "3.0.1"
